@@ -9,7 +9,7 @@ public class AfishaLocationTest extends BaseTest {
     public void afishaLocationTest() {
         homePage.clickOnAfishaButton();
         afishaPage.checkCityIsCorrect();
-        afishaPage.checkCountryIsCorrect();
+        afishaPage.checkCountryIsCorrect("Беларусь");
     }
 
 }

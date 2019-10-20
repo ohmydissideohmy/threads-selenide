@@ -16,11 +16,7 @@ public class HomePage {
     private SelenideElement signInButton = $(By.xpath("//button[contains(@class, 'login-button')]"));
     private SelenideElement loggedUserAvatar = $(By.xpath("//div[contains(@class, 'user-container')]"));
     private ElementsCollection headerItems = $$(By.xpath("//a[contains(@class, 'navigation-item')]"));
-
-    public void inputInSearchPlaceholder() {
-        afishaButton.sendKeys("Drake");
-        afishaButton.submit();
-    }
+    private SelenideElement searchPlaceholder = $(By.className("header-fresh-search-partial-component__field"));
 
     public void clickOnSignInButton() {
         signInButton.click();
@@ -32,5 +28,10 @@ public class HomePage {
 
     public void clickOnAfishaButton() {
         headerItems.get(0).click();
+    }
+
+    public void inputInSearchPlaceholder(String value) {
+        searchPlaceholder.sendKeys(value);
+        searchPlaceholder.submit();
     }
 }
