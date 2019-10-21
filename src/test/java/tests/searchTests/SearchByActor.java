@@ -10,5 +10,4 @@ public class SearchByActor extends BaseTest {
         homePage.inputInSearchPlaceholder("Таррантино");
         searchResultsPage.checkMovieFound("Квентин Тарантино");
     }
-
 }

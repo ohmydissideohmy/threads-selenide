@@ -30,8 +30,13 @@ public class HomePage {
         headerItems.get(0).click();
     }
 
+
     public void inputInSearchPlaceholder(String value) {
         searchPlaceholder.sendKeys(value);
         searchPlaceholder.submit();
+    }
+
+    public void openRatingsPage() {
+        headerItems.get(2).click();
     }
 }

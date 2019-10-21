@@ -5,6 +5,7 @@ import helpers.PropertyReader;
 import org.junit.After;
 import org.junit.Before;
 import pages.*;
+import tests.afishaTests.RatingsPage;
 
 import static com.codeborne.selenide.WebDriverRunner.*;
 
@@ -17,6 +18,7 @@ public abstract class BaseTest {
     public AfishaPage afishaPage = new AfishaPage();
     public SearchResultsPage searchResultsPage = new SearchResultsPage();
     public WillWatchPage willWatchPage = new WillWatchPage();
+    public RatingsPage ratingsPage = new RatingsPage();
 
     @Before
     public void setUp() {
