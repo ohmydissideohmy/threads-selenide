@@ -9,10 +9,10 @@ public class AfishaSearchByMovieTest extends BaseTest {
     public void afishaSearchByMovieTest() {
         homePage.clickOnAfishaButton();
         afishaPage.clickOnMoviesDropdown();
-        afishaPage.selectMovieInDropdown("Джокер");
+        afishaPage.selectMovieInDropdown("Верность");
         afishaPage.clickOnShowResultsButton();
         searchResultsPage.openRandomCinema();
-        searchResultsPage.checkThatCinemaHaveSelectedMovie("Джокер");
+        searchResultsPage.checkThatCinemaHaveSelectedMovie("Верность");
     }
 
 }
