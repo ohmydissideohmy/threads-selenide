@@ -1,9 +1,13 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import helpers.PropertyReader;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pages.*;
 import tests.afishaTests.RatingsPage;
 
@@ -22,6 +26,7 @@ public abstract class BaseTest {
 
     @Before
     public void setUp() {
+        Configuration.headless = true;
         Selenide.open("https://www.kinopoisk.ru");
         getWebDriver().manage().window().maximize();
     }
