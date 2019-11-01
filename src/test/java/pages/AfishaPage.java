@@ -18,7 +18,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class AfishaPage {
 
     private SelenideElement countryDropdown = $(By.xpath("//div[contains(@class, 'selectCountry')]/div"));
-    private SelenideElement cityDropdown = $(By.name("id_cinema"));
+    private SelenideElement cityDropdown = $(By.xpath("//div[contains(@class, 'selectCity')]/div"));
     private SelenideElement filmDropdown = $(By.name("id_film"));
     private SelenideElement showResultsButton = $(By.xpath("//div[contains(@class, 'formButton')]"));
     private SelenideElement openedCountryDropdown = $(By.className("list"));
