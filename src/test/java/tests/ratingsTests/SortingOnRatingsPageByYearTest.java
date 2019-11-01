@@ -1,10 +1,12 @@
 package tests.ratingsTests;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import tests.BaseTest;
 
 public class SortingOnRatingsPageByYearTest extends BaseTest {
 
+    @Ignore
     @Test
     public void sortingOnRatingsPageByYearTest() {
         homePage.openRatingsPage();
