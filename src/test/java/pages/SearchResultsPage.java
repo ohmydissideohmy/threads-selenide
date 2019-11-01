@@ -5,7 +5,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -20,8 +19,8 @@ public class SearchResultsPage {
         cinemas.first().click();
     }
 
-    public void checkThatCinemaHaveSelectedMovie(String searchValue) {
-        moviesList.filterBy(Condition.text(searchValue)).shouldBe(CollectionCondition.sizeGreaterThan(0));
+    public void checkThatCinemaHaveSelectedMovie() {
+        moviesList.filterBy(Condition.text(System.getProperty("movie"))).shouldBe(CollectionCondition.sizeGreaterThan(0));
     }
 
     public void checkThatCityHaveExactCinema(String cinema) {

@@ -5,11 +5,8 @@ import com.codeborne.selenide.Selenide;
 import helpers.PropertyReader;
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import pages.*;
-import tests.afishaTests.RatingsPage;
+import pages.RatingsPage;
 
 import static com.codeborne.selenide.WebDriverRunner.*;
 

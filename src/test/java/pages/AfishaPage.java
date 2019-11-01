@@ -5,8 +5,13 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
+import helpers.PropertyReader;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -29,8 +34,8 @@ public class AfishaPage {
 
     }
 
-    public void selectMovieInDropdown(String searchValue) {
-        filmDropdown.selectOptionContainingText(searchValue);
+    public void selectMovieInDropdown() {
+        filmDropdown.selectOptionContainingText(System.getProperty("movie"));
     }
 
     public void clickOnShowResultsButton() {
@@ -58,5 +63,12 @@ public class AfishaPage {
 
     public void clickOnSortByResults() {
         ratingSortButton.click();
+    }
+
+    public void getMovieFromDropdown() {
+        Select select = new Select(filmDropdown);
+        filmDropdown.click();
+        List<WebElement> options = select.getOptions();
+        System.setProperty("movie",options.get(10).getText());
     }
 }
