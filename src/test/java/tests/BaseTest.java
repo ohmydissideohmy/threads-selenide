@@ -14,7 +14,7 @@ public abstract class BaseTest {
     protected PropertyReader propertyReader = new PropertyReader();
 
     public HomePage homePage = new HomePage();
-    public YandexPasportPage yandexPasportPage = new YandexPasportPage();
+    public LoginPage loginPage = new LoginPage();
     public AfishaPage afishaPage = new AfishaPage();
     public SearchResultsPage searchResultsPage = new SearchResultsPage();
     public WillWatchPage willWatchPage = new WillWatchPage();
@@ -22,7 +22,7 @@ public abstract class BaseTest {
 
     @Before
     public void setUp() {
-        Selenide.open("https://www.kinopoisk.ru");
+        Selenide.open("https://www.metacritic.com");
         getWebDriver().manage().window().maximize();
     }
 

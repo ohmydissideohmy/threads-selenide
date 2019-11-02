@@ -8,20 +8,21 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class YandexPasportPage {
+public class LoginPage {
 
-    private SelenideElement loginPlaceholder = $(By.id("passp-field-login"));
-    private SelenideElement passwordPlaceholder = $(By.id("passp-field-passwd"));
-    private SelenideElement incorrectPasswordError = $(By.xpath("//div[contains(@class, 'passp-form-field__error')]"));
+    private SelenideElement loginPlaceholder = $(By.name("email"));
+    private SelenideElement passwordPlaceholder = $(By.name("password"));
+    private SelenideElement incorrectPasswordError = $(By.className("form_feedback"));
+    private SelenideElement loginButton = $(By.className("flat_blue_btn"));
 
     public void inputLogin(String key) {
         loginPlaceholder.sendKeys(key);
-        loginPlaceholder.submit();
     }
+
+
 
     public void inputPassword(String key) {
         passwordPlaceholder.sendKeys(key);
-        passwordPlaceholder.submit();
     }
 
     public void inputIncorrectLogin(String key) {
@@ -35,5 +36,9 @@ public class YandexPasportPage {
 
     public void checkIncorrectPasswordErrorIsShown() {
         incorrectPasswordError.shouldBe(Condition.visible);
+    }
+
+    public void clickOnLoginButton() {
+        loginButton.click();
     }
 }
