@@ -27,7 +27,6 @@ public class LoginPage {
 
     public void inputIncorrectLogin(String key) {
         loginPlaceholder.sendKeys(key);
-        loginPlaceholder.submit();
     }
 
     public void checkPasswordPlaceholderIsNotVisible() {
