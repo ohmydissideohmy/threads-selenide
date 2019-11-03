@@ -7,7 +7,7 @@ public class AfishaLocationTest extends BaseTest {
 
     @Test
     public void afishaLocationTest() {
-        homePage.clickOnAfishaButton();
+//        homePage.clickOnAfishaButton();
         afishaPage.checkCityIsCorrect();
         afishaPage.checkCountryIsCorrect("Беларусь");
     }

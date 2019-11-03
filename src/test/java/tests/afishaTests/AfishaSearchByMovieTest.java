@@ -7,7 +7,7 @@ public class AfishaSearchByMovieTest extends BaseTest {
 
     @Test
     public void afishaSearchByMovieTest() {
-        homePage.clickOnAfishaButton();
+//        homePage.clickOnAfishaButton();
         afishaPage.clickOnMoviesDropdown();
         afishaPage.getMovieFromDropdown();
         afishaPage.selectMovieInDropdown();

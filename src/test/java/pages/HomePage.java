@@ -9,11 +9,9 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class HomePage {
 
-    private SelenideElement afishaButton = $(By.xpath("//input[@placeholder='Фильмы, персоны, кинотеатры']"));
     private SelenideElement loginButton = $(By.id("login"));
+    private SelenideElement gamesButton = $(By.id("primary_nav_item_games"));
     private SelenideElement loggedUserAvatar = $(By.id("primary_menu_user_profile"));
-    private ElementsCollection headerItems = $$(By.xpath("//a[contains(@class, 'navigation-item')]"));
-    private SelenideElement searchPlaceholder = $(By.className("header-fresh-search-partial-component__field"));
 
     public void clickOnSignInButton() {
         loginButton.click();
@@ -23,17 +21,7 @@ public class HomePage {
         loggedUserAvatar.shouldBe(Condition.visible);
     }
 
-    public void clickOnAfishaButton() {
-        headerItems.get(0).click();
-    }
-
-
-    public void inputInSearchPlaceholder(String value) {
-        searchPlaceholder.sendKeys(value);
-        searchPlaceholder.submit();
-    }
-
-    public void openRatingsPage() {
-        headerItems.get(2).click();
+    public void clickOnGamesButton() {
+        gamesButton.click();
     }
 }

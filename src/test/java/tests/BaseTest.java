@@ -8,6 +8,8 @@ import org.junit.Before;
 import pages.*;
 import pages.RatingsPage;
 
+import java.util.concurrent.TimeUnit;
+
 import static com.codeborne.selenide.WebDriverRunner.*;
 
 public abstract class BaseTest {
@@ -19,12 +21,14 @@ public abstract class BaseTest {
     public AfishaPage afishaPage = new AfishaPage();
     public SearchResultsPage searchResultsPage = new SearchResultsPage();
     public WillWatchPage willWatchPage = new WillWatchPage();
-    public RatingsPage ratingsPage = new RatingsPage();
+    public GamesPage gamesPage = new GamesPage();
 
     @Before
     public void setUp() {
-        Configuration.headless = true;
+//        Configuration.headless = true;
+        Configuration.pageLoadStrategy = "normal";
         Selenide.open("https://www.metacritic.com");
+        getWebDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         getWebDriver().manage().window().maximize();
     }
 

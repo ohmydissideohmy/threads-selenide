@@ -7,7 +7,7 @@ public class AfishaChangeLocationTest extends BaseTest {
 
     @Test
     public void afishaChangeLocationTest() {
-        homePage.clickOnAfishaButton();
+//        homePage.clickOnAfishaButton();
         afishaPage.selectCountryFromDropdown("Украина");
         afishaPage.selectCityFromDropdown("Киев");
         afishaPage.clickOnShowResultsButton();
