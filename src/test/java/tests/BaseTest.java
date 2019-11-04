@@ -2,12 +2,22 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import helpers.PropertyReader;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testcontainers.containers.BrowserWebDriverContainer;
 import pages.*;
 import pages.RatingsPage;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.WebDriverRunner.*;
@@ -26,7 +36,6 @@ public abstract class BaseTest {
     @Before
     public void setUp() {
 //        Configuration.headless = true;
-        Configuration.pageLoadStrategy = "normal";
         Selenide.open("https://www.metacritic.com");
         getWebDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         getWebDriver().manage().window().maximize();
@@ -34,7 +43,7 @@ public abstract class BaseTest {
 
     @After
     public void tearDown() {
-        getWebDriver().close();
+        getWebDriver().quit();
     }
 
 }
