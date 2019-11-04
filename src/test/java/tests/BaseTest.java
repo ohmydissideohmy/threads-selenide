@@ -11,6 +11,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testcontainers.containers.BrowserWebDriverContainer;
@@ -33,12 +34,23 @@ public abstract class BaseTest {
     public WillWatchPage willWatchPage = new WillWatchPage();
     public GamesPage gamesPage = new GamesPage();
 
+    ChromeOptions options = new ChromeOptions();
+
+    @Rule
+    public BrowserWebDriverContainer chrome =
+            new BrowserWebDriverContainer()
+                    .withRecordingMode(BrowserWebDriverContainer.VncRecordingMode.RECORD_FAILING, new File("build"))
+                    .withCapabilities(options.setPageLoadStrategy(PageLoadStrategy.NORMAL))
+                    .withCapabilities(options.addArguments("--disable-dev-shm-usage"));
+
     @Before
     public void setUp() {
-//        Configuration.headless = true;
+        RemoteWebDriver driver = chrome.getWebDriver();
+        WebDriverRunner.setWebDriver(driver);
         Selenide.open("https://www.metacritic.com");
-        getWebDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         getWebDriver().manage().window().maximize();
+        getWebDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
     }
 
     @After
