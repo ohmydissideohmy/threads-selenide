@@ -1,22 +1,17 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import helpers.PropertyReader;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testcontainers.containers.BrowserWebDriverContainer;
 import pages.*;
-import pages.RatingsPage;
+
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
