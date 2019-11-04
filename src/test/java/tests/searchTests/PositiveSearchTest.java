@@ -7,7 +7,7 @@ public class PositiveSearchTest extends BaseTest {
 
     @Test
     public void positiveSearchTest() {
-        homePage.inputInSearchPlaceholder("Бойцовский Клуб");
+//        homePage.inputInSearchPlaceholder("Бойцовский Клуб");
         searchResultsPage.checkMovieFound("Бойцовский клуб");
     }
 

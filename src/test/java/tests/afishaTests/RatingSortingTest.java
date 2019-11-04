@@ -7,7 +7,7 @@ public class RatingSortingTest extends BaseTest {
 
     @Test
     public void ratingSortingTest() {
-        homePage.clickOnAfishaButton();
+//        homePage.clickOnAfishaButton();
         afishaPage.clickOnSortByResults();
         afishaPage.checkMoviesSortedByRating();
     }

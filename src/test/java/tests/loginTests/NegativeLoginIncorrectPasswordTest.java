@@ -8,8 +8,9 @@ public class NegativeLoginIncorrectPasswordTest extends BaseTest {
     @Test
     public void negativeLoginIncorrectPasswordTest() {
         homePage.clickOnSignInButton();
-        yandexPasportPage.inputLogin(propertyReader.getProperty("username"));
-        yandexPasportPage.inputPassword(propertyReader.getProperty("incorrectPassword"));
-        yandexPasportPage.checkIncorrectPasswordErrorIsShown();
+        loginPage.inputLogin(propertyReader.getProperty("username"));
+        loginPage.inputPassword(propertyReader.getProperty("incorrectPassword"));
+        loginPage.clickOnLoginButton();
+        loginPage.checkIncorrectPasswordErrorIsShown();
     }
 }

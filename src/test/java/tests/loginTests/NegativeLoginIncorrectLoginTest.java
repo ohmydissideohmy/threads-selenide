@@ -8,7 +8,8 @@ public class NegativeLoginIncorrectLoginTest extends BaseTest {
     @Test
     public void negativeLoginIncorrectLoginTest() {
         homePage.clickOnSignInButton();
-        yandexPasportPage.inputLogin("incorrectLogin");
-        yandexPasportPage.checkPasswordPlaceholderIsNotVisible();
+        loginPage.inputLogin("incorrectLogin");
+        loginPage.clickOnLoginButton();
+        loginPage.checkIncorrectPasswordErrorIsShown();
     }
 }

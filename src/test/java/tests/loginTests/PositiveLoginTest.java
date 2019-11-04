@@ -8,8 +8,9 @@ public class PositiveLoginTest extends BaseTest {
     @Test
     public void positiveLoginTest() {
         homePage.clickOnSignInButton();
-        yandexPasportPage.inputLogin(propertyReader.getProperty("username"));
-        yandexPasportPage.inputPassword(propertyReader.getProperty("password"));
+        loginPage.inputLogin(propertyReader.getProperty("username"));
+        loginPage.inputPassword(propertyReader.getProperty("password"));
+        loginPage.clickOnLoginButton();
         homePage.checkloggedUserAvatarIsVisible();
     }
 }

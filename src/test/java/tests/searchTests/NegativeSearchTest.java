@@ -7,7 +7,7 @@ public class NegativeSearchTest extends BaseTest {
 
     @Test
     public void negativeSearchTest() {
-        homePage.inputInSearchPlaceholder("adklgjadlgkjsdklgsjdlgjsjdkg");
+//        homePage.inputInSearchPlaceholder("adklgjadlgkjsdklgsjdlgjsjdkg");
         searchResultsPage.checkSearchErrorIsShown();
     }
 
