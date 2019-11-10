@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class SearchResultsPage {
 
     private ElementsCollection cinemas = $$(By.className("schedule-cinema__name"));
-    private ElementsCollection moviesList = $$(By.xpath("//div[contains(@class, 'schedule-film__details')]/a"));
+    private ElementsCollection moviesList = $$(By.xpath("//div[contains(@class, 'schedule-film__details')]"));
     private ElementsCollection moviesNamesList = $$(By.xpath("//p[contains(@class, 'name')]/a"));
     private SelenideElement searchError = $(By.xpath("//*[@id='block_left_pad']/div/table/tbody/tr[1]/td/h2"));
 

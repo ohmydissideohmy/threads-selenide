@@ -22,6 +22,5 @@ public class MoviesNewAndNotableTest extends BaseTest {
         homePage.clickOnNewMoviesTab();
         homePage.selectItemInNewAndNotable(4);
         itemPage.checkThatMoviePageIsOpened();
-
     }
 }

@@ -8,19 +8,19 @@ public class NewAndNotableMusicTest extends BaseTest {
     @Test
     public void newAndNotableMusicTest() {
         homePage.clickOnNewMusicTab();
-        homePage.selectItemInNewAndNotable(0);
+        homePage.selectItemInNewAndNotable(15);
         itemPage.checkThatMusicPageIsOpened();
         homePage.clickOnNewMusicTab();
-        homePage.selectItemInNewAndNotable(1);
+        homePage.selectItemInNewAndNotable(16);
         itemPage.checkThatMusicPageIsOpened();
         homePage.clickOnNewMusicTab();
-        homePage.selectItemInNewAndNotable(2);
+        homePage.selectItemInNewAndNotable(17);
         itemPage.checkThatMusicPageIsOpened();
         homePage.clickOnNewMusicTab();
-        homePage.selectItemInNewAndNotable(3);
+        homePage.selectItemInNewAndNotable(18);
         itemPage.checkThatMusicPageIsOpened();
         homePage.clickOnNewMusicTab();
-        homePage.selectItemInNewAndNotable(4);
+        homePage.selectItemInNewAndNotable(19);
         itemPage.checkThatMusicPageIsOpened();
 
     }

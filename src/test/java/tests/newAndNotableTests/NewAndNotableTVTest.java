@@ -8,19 +8,19 @@ public class NewAndNotableTVTest extends BaseTest {
     @Test
     public void newAndNotableTVTest() {
         homePage.clickOnNewTVTab();
-        homePage.selectItemInNewAndNotable(0);
+        homePage.selectItemInNewAndNotable(10);
         itemPage.checkThatTVPageIsOpened();
         homePage.clickOnNewTVTab();
-        homePage.selectItemInNewAndNotable(1);
+        homePage.selectItemInNewAndNotable(11);
         itemPage.checkThatTVPageIsOpened();
         homePage.clickOnNewTVTab();
-        homePage.selectItemInNewAndNotable(2);
+        homePage.selectItemInNewAndNotable(12);
         itemPage.checkThatTVPageIsOpened();
         homePage.clickOnNewTVTab();
-        homePage.selectItemInNewAndNotable(3);
+        homePage.selectItemInNewAndNotable(13);
         itemPage.checkThatTVPageIsOpened();
         homePage.clickOnNewTVTab();
-        homePage.selectItemInNewAndNotable(4);
+        homePage.selectItemInNewAndNotable(14);
         itemPage.checkThatTVPageIsOpened();
 
     }

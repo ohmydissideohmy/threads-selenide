@@ -12,7 +12,7 @@ public class ItemPage {
     private SelenideElement movieDescription = $(By.xpath("//div[contains(@class, 'movie product summary')]"));
     private SelenideElement gameDescription = $(By.xpath("//div[contains(@class, 'game_content_head')]"));
     private SelenideElement musicDescription =$(By.xpath("//div[contains(@class, 'album_content_head')]"));
-    private SelenideElement tvEpisodes =$(By.xpath("//div[contains(@class, 'inline_ep_guide_episodes')]"));
+    private SelenideElement tvEpisodes =$(By.xpath("//ul[contains(@class, 'inline_ep_guide_episodes')]"));
 
 
     public void checkThatMoviePageIsOpened() {
@@ -22,13 +22,16 @@ public class ItemPage {
 
     public void checkThatGamesPageIsOpened() {
         gameDescription.shouldBe(Condition.visible);
+        Selenide.back();
     }
 
     public void checkThatMusicPageIsOpened() {
         musicDescription.shouldBe(Condition.visible);
+        Selenide.back();
     }
 
     public void checkThatTVPageIsOpened() {
         tvEpisodes.shouldBe(Condition.visible);
+        Selenide.back();
     }
 }

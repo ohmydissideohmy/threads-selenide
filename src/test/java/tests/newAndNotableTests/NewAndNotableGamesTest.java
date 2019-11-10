@@ -9,19 +9,19 @@ public class NewAndNotableGamesTest extends BaseTest {
     @Test
     public void newAndNotableGamesTest() {
         homePage.clickOnNewGamesTab();
-        homePage.selectItemInNewAndNotable(0);
+        homePage.selectItemInNewAndNotable(5);
         itemPage.checkThatGamesPageIsOpened();
         homePage.clickOnNewGamesTab();
-        homePage.selectItemInNewAndNotable(1);
+        homePage.selectItemInNewAndNotable(6);
         itemPage.checkThatGamesPageIsOpened();
         homePage.clickOnNewGamesTab();
-        homePage.selectItemInNewAndNotable(2);
+        homePage.selectItemInNewAndNotable(7);
         itemPage.checkThatGamesPageIsOpened();
         homePage.clickOnNewGamesTab();
-        homePage.selectItemInNewAndNotable(3);
+        homePage.selectItemInNewAndNotable(8);
         itemPage.checkThatGamesPageIsOpened();
         homePage.clickOnNewGamesTab();
-        homePage.selectItemInNewAndNotable(4);
+        homePage.selectItemInNewAndNotable(9);
         itemPage.checkThatGamesPageIsOpened();
 
     }

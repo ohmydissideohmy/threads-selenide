@@ -41,10 +41,10 @@ public class HomePage {
     }
 
     public void clickOnNewMusicTab() {
-        newAndNotableTabs.get(2).click();
+        newAndNotableTabs.get(3).click();
     }
 
     public void clickOnNewTVTab() {
-        newAndNotableTabs.get(3).click();
+        newAndNotableTabs.get(2).click();
     }
 }
