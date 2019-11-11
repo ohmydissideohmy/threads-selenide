@@ -48,6 +48,8 @@ public class GamesPage {
         for (int i = 0; i < ratingValues.size() - 1; i++) {
             if (ratingValues.get(i + 1).length() > 0) {
                 Assert.assertTrue(Float.parseFloat(ratingValues.get(i)) >= Float.parseFloat(ratingValues.get(i + 1)));
+            } else {
+                break;
             }
         }
     }

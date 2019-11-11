@@ -10,28 +10,10 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SearchResultsPage {
 
-    private ElementsCollection cinemas = $$(By.className("schedule-cinema__name"));
-    private ElementsCollection moviesList = $$(By.xpath("//div[contains(@class, 'schedule-film__details')]"));
-    private ElementsCollection moviesNamesList = $$(By.xpath("//p[contains(@class, 'name')]/a"));
-    private SelenideElement searchError = $(By.xpath("//*[@id='block_left_pad']/div/table/tbody/tr[1]/td/h2"));
+    private ElementsCollection searchResultsList = $$(By.xpath("//ul[contains(@class, 'search_results module')]/li/div/div[2]/div/h3/a"));
 
-    public void openRandomCinema() {
-        cinemas.first().click();
-    }
 
-    public void checkThatCinemaHaveSelectedMovie() {
-        moviesList.filterBy(Condition.text(System.getProperty("movie"))).shouldBe(CollectionCondition.sizeGreaterThan(0));
-    }
-
-    public void checkThatCityHaveExactCinema(String cinema) {
-        cinemas.find(Condition.text(cinema)).shouldBe(Condition.visible);
-    }
-
-    public void checkMovieFound(String movieName) {
-        moviesNamesList.filterBy(Condition.text(movieName)).shouldBe(CollectionCondition.sizeGreaterThan(0));
-    }
-
-    public void checkSearchErrorIsShown() {
-        searchError.should(Condition.visible);
+    public void clickOnFirstItem() {
+        searchResultsList.get(1).click();
     }
 }

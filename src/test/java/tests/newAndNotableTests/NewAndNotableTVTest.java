@@ -22,7 +22,5 @@ public class NewAndNotableTVTest extends BaseTest {
         homePage.clickOnNewTVTab();
         homePage.selectItemInNewAndNotable(14);
         itemPage.checkThatTVPageIsOpened();
-
     }
-
 }

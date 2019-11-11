@@ -14,6 +14,7 @@ public class HomePage {
     private SelenideElement loggedUserAvatar = $(By.id("primary_menu_user_profile"));
     private ElementsCollection newAndNotableTabs = $$(By.xpath("//ul[contains(@class, 'tabs_type_1')]/li"));
     private ElementsCollection newAndNotableItems = $$(By.xpath("//ol[contains(@class, 'slot_products')]/li"));
+    private SelenideElement searchPlaceholder = $(By.name("search_term"));
 
     public void clickOnSignInButton() {
         loginButton.click();
@@ -46,5 +47,10 @@ public class HomePage {
 
     public void clickOnNewTVTab() {
         newAndNotableTabs.get(2).click();
+    }
+
+    public void inputInSearchField(String searchValue) {
+        searchPlaceholder.sendKeys(searchValue);
+        searchPlaceholder.submit();
     }
 }
