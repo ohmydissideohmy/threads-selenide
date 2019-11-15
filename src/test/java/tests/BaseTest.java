@@ -24,25 +24,23 @@ public abstract class BaseTest {
 
     public HomePage homePage = new HomePage();
     public LoginPage loginPage = new LoginPage();
-    public AfishaPage afishaPage = new AfishaPage();
     public SearchResultsPage searchResultsPage = new SearchResultsPage();
-    public WillWatchPage willWatchPage = new WillWatchPage();
     public GamesPage gamesPage = new GamesPage();
     public ItemPage itemPage = new ItemPage();
 
     ChromeOptions options = new ChromeOptions();
 
-//    @Rule
-//    public BrowserWebDriverContainer chrome =
-//            new BrowserWebDriverContainer()
-//                    .withRecordingMode(BrowserWebDriverContainer.VncRecordingMode.RECORD_FAILING, new File("build"))
-//                    .withCapabilities(options.setPageLoadStrategy(PageLoadStrategy.NORMAL))
-//                    .withCapabilities(options.addArguments("--disable-dev-shm-usage"));
+    @Rule
+    public BrowserWebDriverContainer chrome =
+            new BrowserWebDriverContainer()
+                    .withRecordingMode(BrowserWebDriverContainer.VncRecordingMode.RECORD_FAILING, new File("build"))
+                    .withCapabilities(options.setPageLoadStrategy(PageLoadStrategy.NORMAL))
+                    .withCapabilities(options.addArguments("--disable-dev-shm-usage"));
 
     @Before
     public void setUp() {
-//        RemoteWebDriver driver = chrome.getWebDriver();
-//        WebDriverRunner.setWebDriver(driver);
+        RemoteWebDriver driver = chrome.getWebDriver();
+        WebDriverRunner.setWebDriver(driver);
         Selenide.open("https://www.metacritic.com");
         Selenide.page(PageLoadStrategy.EAGER);
         getWebDriver().manage().window().maximize();
